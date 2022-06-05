@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cards.apps.CardsConfig',
     'questions.apps.QuestionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
