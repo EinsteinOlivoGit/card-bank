@@ -28,3 +28,12 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+class score(models.Model):
+    nick_name = models.CharField(max_length=40)
+    point = models.IntegerField(default=0)
+    pub_date = models.DateTimeField('date published', default=timezone.now)
+    state = models.CharField(max_length=2, default='AC')
+
+    def __str__(self):
+        return self.nick_name + ' score: ' + self.point
