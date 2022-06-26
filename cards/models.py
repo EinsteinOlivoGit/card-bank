@@ -3,7 +3,7 @@ from django.db import models
 from django.utils import timezone
 
 class Topic(models.Model):
-    topic_text = models.CharField(max_length=200)
+    topic_text = models.CharField(max_length=200, unique=True)
     pub_date = models.DateTimeField('date published', default=timezone.now)
     state = models.CharField(max_length=2, default='AC')
 

@@ -3,7 +3,7 @@ from django.utils import timezone
 
 class Content(models.Model):
     content_text = models.CharField(max_length=2000)
-    topic = models.CharField(max_length=100)
+    topic = models.CharField(max_length=100, unique=True)
     pub_date = models.DateTimeField('date published', default=timezone.now)
     state = models.CharField(max_length=2, default='AC')
 
