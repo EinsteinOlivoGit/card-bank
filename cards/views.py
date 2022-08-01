@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Topic, Card
+from random import randint
 
 # Create your views here.
 def card_topic(request):
@@ -15,6 +16,6 @@ def card(request, topic):
     topic = Topic.objects.get(topic_text=topic)
     card_list = Card.objects.filter(topic=topic)
     context = {
-        'card_list': card_list,
+        'card': card_list[randint(0, len(card_list)-1)],
     }
     return render(request, 'card.html', context=context)

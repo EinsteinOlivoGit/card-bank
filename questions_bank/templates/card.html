@@ -2,6 +2,7 @@
 
 {% block title %}Questions Bank{% endblock %}
 
+{% block intro %}{% endblock %}
 
 {% block content %}
 <!-- start options -->
@@ -9,19 +10,32 @@
   <div class="row listfeaturedtag">
         <!-- begin card -->
         <div class="col-sm-12">
-          <div class="card">
+          <div class="card-f">
             <div class="row">
               <div class="col-md-12">
-                <a href='#'>
-                  <div class="card-block">
-                    <h2 class="card-title">Hello</h2>
+                <div class="flip-card">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front card-title">
+                      <h1 class="card-content">{{ card.front_text  }}</h1>
+                    </div>
+                    <div class="flip-card-back">
+                      <div class="card-content">
+                        <h1>{{ card.back_text }}</h1> 
+                      </div>
+                    </div>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <!-- end card -->
+  </div>
+  <div class="row">
+    <div class="col-sm-9"></div>
+    <div class="col-sm-3">
+        <a class="btn btn-light" href="#">Next</a>
+    </div>
   </div>
   <!-- end options -->
 </section>
