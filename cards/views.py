@@ -12,7 +12,8 @@ def card_topic(request):
     }
     return render(request, 'card_topic.html', context=context)
 
-def card(request, topic):
+def card(request):
+    topic = 'INGLES'
     topic = Topic.objects.get(topic_text=topic)
     card_list = Card.objects.filter(topic=topic)
     context = {
