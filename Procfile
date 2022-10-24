@@ -1,1 +1,1 @@
-web gunicorn card-bank.wsgi:application --log-file -
+web gunicorn questions_bank.wsgi:application --log-file -
