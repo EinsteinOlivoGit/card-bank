@@ -3,7 +3,15 @@
 {% block title %}Questions Bank{% endblock %}
 
 {% block intro %}{% endblock %}
+{% block navbar %}
 
+
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="btn btn-primary" href="">+</a>
+			</li>
+		</ul>
+{% endblock %}
 {% block content %}
 <!-- start options -->
 <section class="featured-posts">
@@ -34,9 +42,13 @@
   <div class="row">
     <div class="col-sm-9"></div>
     <div class="col-sm-3">
-        <a class="btn btn-light" href="#">Next</a>
+	<br/>
+        <a class="btn btn-primary" href="">Next</a>
     </div>
   </div>
   <!-- end options -->
 </section>
+{% endblock %}
+
+{% block footer %}
 {% endblock %}
