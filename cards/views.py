@@ -2,8 +2,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Topic, Card
 from random import randint
+from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+@login_required(login_url='login')
 def card_topic(request):
     topics = Topic.objects.filter(state='AC')
     topic_list = map(lambda x: x.topic_text, topics)
@@ -12,6 +13,7 @@ def card_topic(request):
     }
     return render(request, 'card_topic.html', context=context)
 
+@login_required(login_url='login')
 def card(request):
     topic = 'INGLES'
     topic = Topic.objects.get(topic_text=topic)
