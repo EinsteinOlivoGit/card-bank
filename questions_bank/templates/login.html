@@ -20,16 +20,22 @@
                                     <h1 class="card-content">Login</h1>
                                 </div>
                                 <div>
-                                    <form>
+                                    <form method="POST" action="">
+                                        {% csrf_token %}
                                         <div class="mb-3">
                                             <label for="user" class="form-label">User</label>
-                                            <input type="text" class="form-control" id="user" placeholder="User">
+                                            <input type="text" name="user" class="form-control" id="user" placeholder="User">
                                         </div>
                                         <div class="mb-3">
                                             <label for="pass" class="form-label">Password</label>
-                                            <input type="text" class="form-control" id="pass" placeholder="Password">
+                                            <input type="password" name="pass" class="form-control" id="pass" placeholder="Password">
                                         </div>
                                         <button id="btn-login" type="submit" class="btn">Login</button>
+                                        <div>
+                                            {% for message in messages %}
+                                            <p class="message">{{message}}</p>
+                                            {% endfor %}
+                                        </div>
                                     </form>
                                 </div>
                             </div>

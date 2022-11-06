@@ -953,3 +953,24 @@ iframe {
     border-color: #f0c2a8;
     color:black;
 }
+
+.btn-purple {
+    background-color: #461e47;
+    border-color: #461e47;
+    color:#f0c2a8;
+}
+
+.message {
+    padding: 8px;
+}
+
+.nav-text {
+    margin-left: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.94em;
+    display: block;
+    padding: 0.5em 1em;
+}
