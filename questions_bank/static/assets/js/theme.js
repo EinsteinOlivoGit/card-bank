@@ -149,5 +149,8 @@ jQuery(document).ready(function($){
     }
 
 
-
+    var card = $('.flip-card-inner');
+    card.click(function() {
+        card.toggleClass('is-flipped');
+    });
 });

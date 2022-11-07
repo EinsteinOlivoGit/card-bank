@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Questions Bank{% endblock %}
+
+{% block intro %}{% endblock %}
+{% block navbar %}
+{% endblock %}
+{% block content %}
+<!-- start options -->
+<section class="featured-posts">
+    <div class="row listfeaturedtag">
+        <!-- begin card -->
+        <div class="col-sm-12">
+            <div class="card-f">
+                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-login">
+                            <div class="card-inner">
+                                <div class="card-login-title">
+                                    <h1 class="card-content">Login</h1>
+                                </div>
+                                <div>
+                                    <form method="POST" action="">
+                                        {% csrf_token %}
+                                        <div class="mb-3 card-input">
+                                            <label for="user" class="form-label">User</label>
+                                            <input type="text" name="user" class="form-control" id="user" placeholder="User">
+                                        </div>
+                                        <div class="mb-3 card-input">
+                                            <label for="pass" class="form-label">Password</label>
+                                            <input type="password" name="pass" class="form-control" id="pass" placeholder="Password">
+                                        </div>
+                                        <button id="btn-login" type="submit" class="btn">Login</button>
+                                        <div>
+                                            {% for message in messages %}
+                                            <p class="message">{{message}}</p>
+                                            {% endfor %}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
+    </div>
+<!-- end options -->
+</section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Questions Bank{% endblock %}
+
+{% block intro %}{% endblock %}
+{% block navbar %}
+{% endblock %}
+{% block content %}
+<!-- start options -->
+<section class="featured-posts">
+    <div class="row listfeaturedtag">
+        <!-- begin card -->
+        <div class="col-sm-12">
+            <div class="card-f">
+                 <div class="row">
+                    <div class="col-md-12">
+                        <div class="card save-card">
+                            <div class="card-inner">
+                                <div class="card-login-title">
+                                    <h1 class="card-content">NEW CARD</h1>
+                                </div>
+                                <div>
+                                    <form method="POST" action="">
+                                        {% csrf_token %}
+                                        <div class="mb-3 card-input">
+                                            <label for="front-text" class="form-label">Front</label>
+                                            <input type="text" name="front-text" class="form-control" id="front-text" placeholder="Hello">
+                                        </div>
+                                        <div class="mb-3 card-input">
+                                            <label for="back-text" class="form-label">Back</label>
+                                            <input type="text" name="back-text" class="form-control" id="back-text" placeholder="Used as a greeting or to begin a phone conversation.">
+                                        </div>
+                                        <button id="btn-save-card" type="submit" class="btn btn-purple">Save</button>
+                                        <a href='{% url 'card' %}' id="btn-cancel-card" class="btn btn-purple">back</a>
+                                        <div>
+                                            {% for message in messages %}
+                                            <p class="message">{{message}}</p>
+                                            {% endfor %}
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
+    </div>
+<!-- end options -->
+</section>
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

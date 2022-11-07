@@ -4,13 +4,17 @@
 
 {% block intro %}{% endblock %}
 {% block navbar %}
-
-
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="btn btn-primary" href="">+</a>
-			</li>
-		</ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="btn btn-purple" href="{% url 'add_card' %}">+</a>
+        </li>
+        <li class="nav-item">
+            <span class="nav-text"> Hello, {{request.user}} <span>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'logout' %}">logout</a>
+        </li>
+    </ul>
 {% endblock %}
 {% block content %}
 <!-- start options -->
@@ -43,7 +47,7 @@
     <div class="col-sm-9"></div>
     <div class="col-sm-3">
 	<br/>
-        <a class="btn btn-primary" href="">Next</a>
+        <a class="btn btn-purple" href="">Next</a>
     </div>
   </div>
   <!-- end options -->
