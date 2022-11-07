@@ -5,6 +5,10 @@ from django.contrib import messages
 
 # Create your views here.
 def login_page(request):
+    if request.user.is_authenticated:
+        return redirect('/')
+
+
     if request.method == 'POST':
         username = request.POST.get('user')
         password = request.POST.get('pass')

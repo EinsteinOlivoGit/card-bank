@@ -971,7 +971,7 @@ iframe {
 .btn-purple {
     background-color: #461e47;
     border-color: #461e47;
-    color:#f0c2a8;
+    color:#f0c2a8 !important;
 }
 
 .message {
