@@ -14,23 +14,24 @@
             <div class="card-f">
                  <div class="row">
                     <div class="col-md-12">
-                        <div class="card card-login">
+                        <div class="card save-card">
                             <div class="card-inner">
                                 <div class="card-login-title">
-                                    <h1 class="card-content">Login</h1>
+                                    <h1 class="card-content">NEW CARD</h1>
                                 </div>
                                 <div>
                                     <form method="POST" action="">
                                         {% csrf_token %}
                                         <div class="mb-3 card-input">
-                                            <label for="user" class="form-label">User</label>
-                                            <input type="text" name="user" class="form-control" id="user" placeholder="User">
+                                            <label for="front-text" class="form-label">Front</label>
+                                            <input type="text" name="front-text" class="form-control" id="front-text" placeholder="Hello">
                                         </div>
                                         <div class="mb-3 card-input">
-                                            <label for="pass" class="form-label">Password</label>
-                                            <input type="password" name="pass" class="form-control" id="pass" placeholder="Password">
+                                            <label for="back-text" class="form-label">Back</label>
+                                            <input type="text" name="back-text" class="form-control" id="back-text" placeholder="Used as a greeting or to begin a phone conversation.">
                                         </div>
-                                        <button id="btn-login" type="submit" class="btn">Login</button>
+                                        <button id="btn-save-card" type="submit" class="btn btn-purple">Save</button>
+                                        <a href='{% url 'card' %}' id="btn-cancel-card" class="btn btn-purple">back</a>
                                         <div>
                                             {% for message in messages %}
                                             <p class="message">{{message}}</p>
