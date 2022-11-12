@@ -844,6 +844,11 @@ iframe {
         margin-left: 0;
         margin-top: 10px;
     }
+    .navbar-toggleable-md .navbar-nav .nav-text {
+        margin-left: 0;
+        margin-top: 10px;
+        padding-left: 0;
+    }
     .intro {padding:3rem 0;}
     .wrapintro {padding: 2rem 1rem;}
     .intro h2 {margin-top: 1rem;   margin-bottom: 1rem;}
@@ -924,7 +929,6 @@ iframe {
 }
 
 .card-f {
-    width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -986,5 +990,8 @@ iframe {
     letter-spacing: 1px;
     font-size: 0.94em;
     display: block;
-    padding: 0.5em 1em;
+    padding: 8px;
+}
+#logo {
+    width: 80px;
 }
