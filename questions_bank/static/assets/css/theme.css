@@ -992,6 +992,16 @@ iframe {
     display: block;
     padding: 8px;
 }
+
 #logo {
-    width: 80px;
+    width: 70px;
+}
+
+@media (max-width:550px) {
+	#log {
+	    width: 60px;
+	}
+        .flip-card {
+            height: 400px;
+        }
 }
